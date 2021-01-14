@@ -18,6 +18,12 @@ namespace XP_based_Scrum_Task_Board_Application
         }
         private void Form_Main_Load(object sender, EventArgs e)
         {
+            Form_ProjectLogin form_ProjectLogin = new Form_ProjectLogin();
+            form_ProjectLogin.ShowDialog();
+            if (!form_ProjectLogin.transition)
+            {
+                this.Close();
+            }
 
         }
         private void btn_Close_Click(object sender, EventArgs e)
