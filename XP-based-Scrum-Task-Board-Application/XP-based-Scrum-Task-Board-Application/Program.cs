@@ -16,7 +16,7 @@ namespace XP_based_Scrum_Task_Board_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form_Main());
         }
     }
 }
