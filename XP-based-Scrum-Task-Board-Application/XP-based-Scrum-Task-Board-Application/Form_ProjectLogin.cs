@@ -36,22 +36,24 @@ namespace XP_based_Scrum_Task_Board_Application
 
         private void btn_ProjectCardAdd_Click(object sender, EventArgs e)
         {
-            Card_Add(Panel_Project);
+            Form_ProjectDetails form_ProjectDetails = new Form_ProjectDetails();
+            form_ProjectDetails.ShowDialog();
+            Card_Add(Panel_Project, form_ProjectDetails.ButtonName);
         }
         private void ProjectCard_Click(object sender, EventArgs e)
         {
             transition = true;
             this.Close();
         }
-        private void Card_Add(Panel PanelToAttach)
+        public void Card_Add(Panel PanelToAttach, string ButtonName)
         {
             Button crt = new Button();
             crt.Click += ProjectCard_Click;
             crt.TextAlign = ContentAlignment.TopLeft;
             crt.Padding = new Padding(10);
             crt.BackColor = Color.Red;
-            crt.Name = "test";
-            crt.Text = "selam balım";
+            crt.Name = ButtonName;
+            crt.Text = ButtonName;
             crt.Size = new Size(270, 100);
             crt.Dock = DockStyle.Top;
             PanelToAttach.Controls.Add(crt);

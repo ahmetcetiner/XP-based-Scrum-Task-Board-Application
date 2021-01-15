@@ -73,6 +73,26 @@ namespace XP_based_Scrum_Task_Board_Application.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_right_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_right_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_right_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_right_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shutdown_2 {
             get {
                 object obj = ResourceManager.GetObject("icons8_shutdown_2", resourceCulture);

@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ProjectDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProjectDetails.Designer.cs">
+      <DependentUpon>Form_ProjectDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ProjectLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProjectDetails.resx">
+      <DependentUpon>Form_ProjectDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ProjectLogin.resx">
       <DependentUpon>Form_ProjectLogin.cs</DependentUpon>
@@ -100,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_subtract_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_right_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_right_2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
