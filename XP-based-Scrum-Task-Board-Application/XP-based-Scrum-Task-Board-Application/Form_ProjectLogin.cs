@@ -38,14 +38,17 @@ namespace XP_based_Scrum_Task_Board_Application
         {
             Form_ProjectDetails form_ProjectDetails = new Form_ProjectDetails();
             form_ProjectDetails.ShowDialog();
-            Card_Add(Panel_Project, form_ProjectDetails.ButtonName);
+            if (form_ProjectDetails.Transition)
+            {
+                Card_Add(Panel_Project, form_ProjectDetails.ButtonName,100);
+            }
         }
         private void ProjectCard_Click(object sender, EventArgs e)
         {
             transition = true;
             this.Close();
         }
-        public void Card_Add(Panel PanelToAttach, string ButtonName)
+        public void Card_Add(Panel PanelToAttach, string ButtonName,int size)
         {
             Button crt = new Button();
             crt.Click += ProjectCard_Click;
@@ -54,10 +57,19 @@ namespace XP_based_Scrum_Task_Board_Application
             crt.BackColor = Color.Red;
             crt.Name = ButtonName;
             crt.Text = ButtonName;
-            crt.Size = new Size(270, 100);
+            crt.Size = new Size(270, size);
             crt.Dock = DockStyle.Top;
             PanelToAttach.Controls.Add(crt);
         }
 
+        private void btn_EmployeesCardAdd_Click(object sender, EventArgs e)
+        {
+            Form_EmployeesDetails form_EmployeesDetails = new Form_EmployeesDetails();
+            form_EmployeesDetails.ShowDialog();
+            if (form_EmployeesDetails.Transition)
+            {
+                Card_Add(Panel_Employees, form_EmployeesDetails.Name,50);
+            }
+        }
     }
 }

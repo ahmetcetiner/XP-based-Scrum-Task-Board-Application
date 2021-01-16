@@ -36,6 +36,7 @@
             this.lbl_SelectedEmployees = new System.Windows.Forms.Label();
             this.btn_Ok = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,13 +46,13 @@
             this.lbl_ProjectName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_ProjectName.Location = new System.Drawing.Point(19, 32);
             this.lbl_ProjectName.Name = "lbl_ProjectName";
-            this.lbl_ProjectName.Size = new System.Drawing.Size(70, 17);
+            this.lbl_ProjectName.Size = new System.Drawing.Size(97, 17);
             this.lbl_ProjectName.TabIndex = 0;
-            this.lbl_ProjectName.Text = "Proje Adı :";
+            this.lbl_ProjectName.Text = "Project Name :";
             // 
             // txt_ProjectName
             // 
-            this.txt_ProjectName.Location = new System.Drawing.Point(117, 32);
+            this.txt_ProjectName.Location = new System.Drawing.Point(122, 32);
             this.txt_ProjectName.Name = "txt_ProjectName";
             this.txt_ProjectName.Size = new System.Drawing.Size(127, 20);
             this.txt_ProjectName.TabIndex = 1;
@@ -94,11 +95,11 @@
             // 
             // btn_Ok
             // 
-            this.btn_Ok.Location = new System.Drawing.Point(305, 360);
+            this.btn_Ok.Location = new System.Drawing.Point(216, 360);
             this.btn_Ok.Name = "btn_Ok";
             this.btn_Ok.Size = new System.Drawing.Size(83, 28);
             this.btn_Ok.TabIndex = 7;
-            this.btn_Ok.Text = "Okey";
+            this.btn_Ok.Text = "Add";
             this.btn_Ok.UseVisualStyleBackColor = true;
             this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
             // 
@@ -111,11 +112,22 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Location = new System.Drawing.Point(305, 360);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(83, 28);
+            this.btn_cancel.TabIndex = 8;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
             // Form_ProjectDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 400);
+            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_Ok);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_SelectedEmployees);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Label lbl_SelectedEmployees;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_Ok;
+        private System.Windows.Forms.Button btn_cancel;
     }
 }
