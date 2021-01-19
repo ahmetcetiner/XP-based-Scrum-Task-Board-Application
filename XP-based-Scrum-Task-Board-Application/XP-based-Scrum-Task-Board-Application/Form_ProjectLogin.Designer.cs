@@ -30,19 +30,19 @@
         {
             this.Panel_Project = new System.Windows.Forms.Panel();
             this.Panel_Top = new System.Windows.Forms.Panel();
-            this.Panel_Baslik = new System.Windows.Forms.Panel();
-            this.Panel_Bottom = new System.Windows.Forms.Panel();
             this.btn_Close = new System.Windows.Forms.PictureBox();
-            this.lbl_ProjectBaslik = new System.Windows.Forms.Label();
-            this.Panel_Employees = new System.Windows.Forms.Panel();
-            this.lbl_EmployeesBaslik = new System.Windows.Forms.Label();
-            this.btn_ProjectCardAdd = new System.Windows.Forms.PictureBox();
+            this.Panel_Baslik = new System.Windows.Forms.Panel();
             this.btn_EmployeesCardAdd = new System.Windows.Forms.PictureBox();
+            this.btn_ProjectCardAdd = new System.Windows.Forms.PictureBox();
+            this.lbl_EmployeesBaslik = new System.Windows.Forms.Label();
+            this.lbl_ProjectBaslik = new System.Windows.Forms.Label();
+            this.Panel_Bottom = new System.Windows.Forms.Panel();
+            this.Panel_Employees = new System.Windows.Forms.Panel();
             this.Panel_Top.SuspendLayout();
-            this.Panel_Baslik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_ProjectCardAdd)).BeginInit();
+            this.Panel_Baslik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_EmployeesCardAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_ProjectCardAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Project
@@ -64,30 +64,6 @@
             this.Panel_Top.Size = new System.Drawing.Size(800, 40);
             this.Panel_Top.TabIndex = 1;
             // 
-            // Panel_Baslik
-            // 
-            this.Panel_Baslik.BackColor = System.Drawing.Color.Salmon;
-            this.Panel_Baslik.Controls.Add(this.btn_EmployeesCardAdd);
-            this.Panel_Baslik.Controls.Add(this.btn_ProjectCardAdd);
-            this.Panel_Baslik.Controls.Add(this.lbl_EmployeesBaslik);
-            this.Panel_Baslik.Controls.Add(this.lbl_ProjectBaslik);
-            this.Panel_Baslik.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Baslik.Location = new System.Drawing.Point(0, 40);
-            this.Panel_Baslik.Margin = new System.Windows.Forms.Padding(0);
-            this.Panel_Baslik.Name = "Panel_Baslik";
-            this.Panel_Baslik.Size = new System.Drawing.Size(800, 50);
-            this.Panel_Baslik.TabIndex = 2;
-            // 
-            // Panel_Bottom
-            // 
-            this.Panel_Bottom.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Panel_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Panel_Bottom.Location = new System.Drawing.Point(0, 690);
-            this.Panel_Bottom.Margin = new System.Windows.Forms.Padding(0);
-            this.Panel_Bottom.Name = "Panel_Bottom";
-            this.Panel_Bottom.Size = new System.Drawing.Size(800, 10);
-            this.Panel_Bottom.TabIndex = 3;
-            // 
             // btn_Close
             // 
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -103,33 +79,32 @@
             this.btn_Close.MouseEnter += new System.EventHandler(this.btn_Close_MouseEnter);
             this.btn_Close.MouseLeave += new System.EventHandler(this.btn_Close_MouseLeave);
             // 
-            // lbl_ProjectBaslik
+            // Panel_Baslik
             // 
-            this.lbl_ProjectBaslik.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_ProjectBaslik.Location = new System.Drawing.Point(50, 0);
-            this.lbl_ProjectBaslik.Name = "lbl_ProjectBaslik";
-            this.lbl_ProjectBaslik.Size = new System.Drawing.Size(250, 50);
-            this.lbl_ProjectBaslik.TabIndex = 1;
-            this.lbl_ProjectBaslik.Text = "PROJECTS";
-            this.lbl_ProjectBaslik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Panel_Baslik.BackColor = System.Drawing.Color.Salmon;
+            this.Panel_Baslik.Controls.Add(this.btn_EmployeesCardAdd);
+            this.Panel_Baslik.Controls.Add(this.btn_ProjectCardAdd);
+            this.Panel_Baslik.Controls.Add(this.lbl_EmployeesBaslik);
+            this.Panel_Baslik.Controls.Add(this.lbl_ProjectBaslik);
+            this.Panel_Baslik.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_Baslik.Location = new System.Drawing.Point(0, 40);
+            this.Panel_Baslik.Margin = new System.Windows.Forms.Padding(0);
+            this.Panel_Baslik.Name = "Panel_Baslik";
+            this.Panel_Baslik.Size = new System.Drawing.Size(800, 50);
+            this.Panel_Baslik.TabIndex = 2;
             // 
-            // Panel_Employees
+            // btn_EmployeesCardAdd
             // 
-            this.Panel_Employees.Location = new System.Drawing.Point(450, 90);
-            this.Panel_Employees.Margin = new System.Windows.Forms.Padding(0);
-            this.Panel_Employees.Name = "Panel_Employees";
-            this.Panel_Employees.Size = new System.Drawing.Size(350, 600);
-            this.Panel_Employees.TabIndex = 4;
-            // 
-            // lbl_EmployeesBaslik
-            // 
-            this.lbl_EmployeesBaslik.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_EmployeesBaslik.Location = new System.Drawing.Point(500, 0);
-            this.lbl_EmployeesBaslik.Name = "lbl_EmployeesBaslik";
-            this.lbl_EmployeesBaslik.Size = new System.Drawing.Size(260, 50);
-            this.lbl_EmployeesBaslik.TabIndex = 2;
-            this.lbl_EmployeesBaslik.Text = "EMPLOYEES";
-            this.lbl_EmployeesBaslik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_EmployeesCardAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_EmployeesCardAdd.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_plus_math_1;
+            this.btn_EmployeesCardAdd.ImageLocation = "";
+            this.btn_EmployeesCardAdd.Location = new System.Drawing.Point(777, 4);
+            this.btn_EmployeesCardAdd.Name = "btn_EmployeesCardAdd";
+            this.btn_EmployeesCardAdd.Size = new System.Drawing.Size(20, 20);
+            this.btn_EmployeesCardAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btn_EmployeesCardAdd.TabIndex = 4;
+            this.btn_EmployeesCardAdd.TabStop = false;
+            this.btn_EmployeesCardAdd.Click += new System.EventHandler(this.btn_EmployeesCardAdd_Click);
             // 
             // btn_ProjectCardAdd
             // 
@@ -144,17 +119,43 @@
             this.btn_ProjectCardAdd.TabStop = false;
             this.btn_ProjectCardAdd.Click += new System.EventHandler(this.btn_ProjectCardAdd_Click);
             // 
-            // btn_EmployeesCardAdd
+            // lbl_EmployeesBaslik
             // 
-            this.btn_EmployeesCardAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_EmployeesCardAdd.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_plus_math_1;
-            this.btn_EmployeesCardAdd.ImageLocation = "";
-            this.btn_EmployeesCardAdd.Location = new System.Drawing.Point(777, 4);
-            this.btn_EmployeesCardAdd.Name = "btn_EmployeesCardAdd";
-            this.btn_EmployeesCardAdd.Size = new System.Drawing.Size(20, 20);
-            this.btn_EmployeesCardAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btn_EmployeesCardAdd.TabIndex = 4;
-            this.btn_EmployeesCardAdd.TabStop = false;
+            this.lbl_EmployeesBaslik.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_EmployeesBaslik.Location = new System.Drawing.Point(500, 0);
+            this.lbl_EmployeesBaslik.Name = "lbl_EmployeesBaslik";
+            this.lbl_EmployeesBaslik.Size = new System.Drawing.Size(260, 50);
+            this.lbl_EmployeesBaslik.TabIndex = 2;
+            this.lbl_EmployeesBaslik.Text = "EMPLOYEES";
+            this.lbl_EmployeesBaslik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_ProjectBaslik
+            // 
+            this.lbl_ProjectBaslik.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_ProjectBaslik.Location = new System.Drawing.Point(50, 0);
+            this.lbl_ProjectBaslik.Name = "lbl_ProjectBaslik";
+            this.lbl_ProjectBaslik.Size = new System.Drawing.Size(250, 50);
+            this.lbl_ProjectBaslik.TabIndex = 1;
+            this.lbl_ProjectBaslik.Text = "PROJECTS";
+            this.lbl_ProjectBaslik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Panel_Bottom
+            // 
+            this.Panel_Bottom.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Panel_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Panel_Bottom.Location = new System.Drawing.Point(0, 690);
+            this.Panel_Bottom.Margin = new System.Windows.Forms.Padding(0);
+            this.Panel_Bottom.Name = "Panel_Bottom";
+            this.Panel_Bottom.Size = new System.Drawing.Size(800, 10);
+            this.Panel_Bottom.TabIndex = 3;
+            // 
+            // Panel_Employees
+            // 
+            this.Panel_Employees.Location = new System.Drawing.Point(450, 90);
+            this.Panel_Employees.Margin = new System.Windows.Forms.Padding(0);
+            this.Panel_Employees.Name = "Panel_Employees";
+            this.Panel_Employees.Size = new System.Drawing.Size(350, 600);
+            this.Panel_Employees.TabIndex = 4;
             // 
             // Form_ProjectLogin
             // 
@@ -172,10 +173,10 @@
             this.Text = "Form_ProjectLogin";
             this.Load += new System.EventHandler(this.Form_ProjectLogin_Load);
             this.Panel_Top.ResumeLayout(false);
-            this.Panel_Baslik.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_ProjectCardAdd)).EndInit();
+            this.Panel_Baslik.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_EmployeesCardAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_ProjectCardAdd)).EndInit();
             this.ResumeLayout(false);
 
         }

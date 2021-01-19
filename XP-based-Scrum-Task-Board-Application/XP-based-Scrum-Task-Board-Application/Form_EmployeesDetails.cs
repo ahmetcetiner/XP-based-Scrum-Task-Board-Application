@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace XP_based_Scrum_Task_Board_Application
 {
-    public partial class Form_ProjectDetails : Form
+    public partial class Form_EmployeesDetails : Form
     {
-        public Form_ProjectDetails()
+        public Form_EmployeesDetails()
         {
             InitializeComponent();
         }
-        public string ButtonName;
+        public string Name;
         public bool Transition = false;
         private void btn_Ok_Click(object sender, EventArgs e)
         {
             Transition = true;
-            ButtonName = txt_ProjectName.Text;
-            this.Close();
-        }
-
-        private void btn_cancel_Click(object sender, EventArgs e)
-        {
+            Name = txt_EmployeesName.Text + " " + txt_EmployeesLastName.Text;
             this.Close();
         }
     }
