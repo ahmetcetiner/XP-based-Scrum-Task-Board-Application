@@ -30,27 +30,22 @@ namespace XP_based_Scrum_Task_Board_Application
         {
             this.Close();
         }
-
         private void btn_Close_MouseEnter(object sender, EventArgs e)
         {
             btn_Close.Image = Properties.Resources.icons8_shutdown_2;
         }
-
         private void btn_Close_MouseLeave(object sender, EventArgs e)
         {
             btn_Close.Image = Properties.Resources.icons8_shutdown_3;
         }
-
         private void btn_TodoCardAdd_Click(object sender, EventArgs e)
         {
             Card_Add(Panel_Todo);
         }
-
         private void btn_InProgressCardAdd_Click(object sender, EventArgs e)
         {
             Card_Add(Panel_InProgress);
         }
-
         private void btn_RevisonCardAdd_Click(object sender, EventArgs e)
         {
             Card_Add(Panel_Revison);
@@ -84,7 +79,20 @@ namespace XP_based_Scrum_Task_Board_Application
             parent.BackColor = Color.FromArgb(0, 32, 41);
             MessageBox.Show(button.Name + "Birakildi=" + parent.Name);
         }
-        private void Card_MouseDown(object sender, MouseEventArgs e)
+        private void Card_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Button button = sender as Button;
+                Form_TechnicalCard Tech = new Form_TechnicalCard();
+                MessageBox.Show("Technic Cart"+button.Text);
+                if (Tech.ShowDialog() == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
+            }
+        }
+        private void Card_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -95,7 +103,8 @@ namespace XP_based_Scrum_Task_Board_Application
         private void Card_Add(Panel PanelToAttach)
         {
             Button crt = new Button();
-            crt.MouseDown += new MouseEventHandler(Card_MouseDown);
+            crt.MouseMove += new MouseEventHandler(Card_MouseMove);
+            crt.MouseClick += new MouseEventHandler(Card_MouseClick);
             crt.TextAlign = ContentAlignment.TopLeft;
             crt.Padding = new Padding(10);
             crt.BackColor = Color.Red;

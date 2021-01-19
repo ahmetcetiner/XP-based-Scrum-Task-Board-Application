@@ -30,26 +30,27 @@ namespace XP_based_Scrum_Task_Board_Application
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Close = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
@@ -60,6 +61,7 @@ namespace XP_based_Scrum_Task_Board_Application
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -72,6 +74,7 @@ namespace XP_based_Scrum_Task_Board_Application
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btn_Close);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -79,14 +82,18 @@ namespace XP_based_Scrum_Task_Board_Application
             this.panel1.Size = new System.Drawing.Size(800, 40);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btn_Close
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 790);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 10);
-            this.panel2.TabIndex = 1;
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Close.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_shutdown_3;
+            this.btn_Close.ImageLocation = "";
+            this.btn_Close.Location = new System.Drawing.Point(753, 3);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(35, 35);
+            this.btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btn_Close.TabIndex = 2;
+            this.btn_Close.TabStop = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // label1
             // 
@@ -97,6 +104,15 @@ namespace XP_based_Scrum_Task_Board_Application
             this.label1.Size = new System.Drawing.Size(202, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tehcnical Card";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 790);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 10);
+            this.panel2.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -170,6 +186,13 @@ namespace XP_based_Scrum_Task_Board_Application
             this.tableLayoutPanel2.Size = new System.Drawing.Size(333, 57);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(105, 3);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(225, 22);
+            this.textBox3.TabIndex = 4;
+            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -198,13 +221,6 @@ namespace XP_based_Scrum_Task_Board_Application
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(225, 22);
             this.textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(105, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 22);
-            this.textBox3.TabIndex = 4;
             // 
             // tableLayoutPanel3
             // 
@@ -274,14 +290,6 @@ namespace XP_based_Scrum_Task_Board_Application
             this.tableLayoutPanel4.Size = new System.Drawing.Size(767, 180);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(3, 25);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(761, 152);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -292,6 +300,14 @@ namespace XP_based_Scrum_Task_Board_Application
             this.label8.TabIndex = 2;
             this.label8.Text = "Description of the Work";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(3, 25);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(761, 152);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
             // 
             // tableLayoutPanel5
             // 
@@ -367,7 +383,7 @@ namespace XP_based_Scrum_Task_Board_Application
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
+            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -376,7 +392,7 @@ namespace XP_based_Scrum_Task_Board_Application
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
+            this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -385,7 +401,7 @@ namespace XP_based_Scrum_Task_Board_Application
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
-            this.button3.Text = "button3";
+            this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // Form_TechnicalCard
@@ -411,6 +427,7 @@ namespace XP_based_Scrum_Task_Board_Application
             this.Load += new System.EventHandler(this.Form_TechnicalCard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Close)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -457,5 +474,6 @@ namespace XP_based_Scrum_Task_Board_Application
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox btn_Close;
     }
 }
