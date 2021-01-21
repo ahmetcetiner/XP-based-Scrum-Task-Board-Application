@@ -24,7 +24,6 @@ namespace XP_based_Scrum_Task_Board_Application
             {
                 this.Close();
             }
-
         }
         private void btn_Close_Click(object sender, EventArgs e)
         {
@@ -50,12 +49,10 @@ namespace XP_based_Scrum_Task_Board_Application
         {
             Card_Add(Panel_Revison);
         }
-
         private void btn_CheckCardAdd_Click(object sender, EventArgs e)
         {
             Card_Add(Panel_Check);
         }
-
         private void btn_DoneCardAdd_Click(object sender, EventArgs e)
         {
             Card_Add(Panel_Done);

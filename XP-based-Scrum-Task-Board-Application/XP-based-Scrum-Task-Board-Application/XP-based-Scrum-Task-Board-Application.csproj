@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,7 @@
     <Compile Include="Form_TechnicalCard.Designer.cs">
       <DependentUpon>Form_TechnicalCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ICommands.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Queries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

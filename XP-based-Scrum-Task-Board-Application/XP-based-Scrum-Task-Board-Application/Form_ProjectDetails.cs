@@ -20,6 +20,9 @@ namespace XP_based_Scrum_Task_Board_Application
         public bool Transition = false;
         private void btn_Ok_Click(object sender, EventArgs e)
         {
+            Commands commands = new Commands();
+            ICommands icommands = (ICommands)commands;
+            icommands.AddProject(txt_ProjectName.Text);
             Transition = true;
             ButtonName = txt_ProjectName.Text;
             this.Close();

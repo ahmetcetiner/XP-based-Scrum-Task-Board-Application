@@ -10,24 +10,9 @@ namespace XP_based_Scrum_Task_Board_Application
     public class Queries
     {
         SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-1N5RR86\MSSQLSERVER01;Initial Catalog=Scrum_Task_Board;Integrated Security=True");
-        public void AddProject(int projectID, string projectName)
-        {
-            connection.Open();
-            SqlCommand command = new SqlCommand("insert into tblProjects values(" + projectID + ",'" + projectName + "')");
-            connection.Close();
-        }
-        public void DeleteProject(int projectID, string projectName)
-        {
-            connection.Open();            
-            SqlCommand command = new SqlCommand("delete from tblProject where (" + projectID + ")");
-            connection.Close();
-        }
-        public void UpdateProject(int projectID, string projectName)
-        {
-            connection.Open();
-            SqlCommand command = new SqlCommand("update tblProjects set projectID = (" + projectID + ") , projectName = ('"+projectName+"')"); ;
-            connection.Close();
-        }
+
+  
+
         public void AddTechnicalCard(int cardID, int projectID, string status, string cardName,string explanation, string notes, DateTime creationDate, DateTime realizationTime)
         {
             connection.Open();
@@ -37,13 +22,13 @@ namespace XP_based_Scrum_Task_Board_Application
         public void DeleteTechnicalCard(int cardID, int projectID, string status, string cardName, string explanation, string notes, DateTime creationDate, DateTime realizationTime)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("delete from tblCard where (" + cardID + ")");
+            SqlCommand command = new SqlCommand("delete from tblCards where (" + cardID + ")");
             connection.Close();
         }
         public void UpdateTechnicalCard(int cardID, int projectID, string status, string cardName, string explanation, string notes, DateTime creationDate, DateTime realizationTime)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("update tblCard set cardID = ("+cardID+"),projectID = ("+projectID+"),status = ('"+status+"'),cardName = ('"+cardName+"'),explanation = ('"+explanation+"'),notes = ('"+notes+"'),creationDate = ('"+creationDate+"'),realizitonTime = ('"+realizationTime+"')");
+            SqlCommand command = new SqlCommand("update tblCards set cardID = ("+cardID+"),projectID = ("+projectID+"),status = ('"+status+"'),cardName = ('"+cardName+"'),explanation = ('"+explanation+"'),notes = ('"+notes+"'),creationDate = ('"+creationDate+"'),realizitonTime = ('"+realizationTime+"')");
             connection.Close();
         }
         public void AddWorkFollow(int cardID, DateTime date, string status, string workToDo, string explanation)
