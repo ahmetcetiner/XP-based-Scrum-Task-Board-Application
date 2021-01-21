@@ -16,6 +16,12 @@ namespace XP_based_Scrum_Task_Board_Application
         {
             InitializeComponent();
         }
+        Commands commands = new Commands();
+        Form_TechnicalCard form_TechnicalCard = new Form_TechnicalCard();
+        List<int> CardNameList = new List<int>();
+        List<string> CardTextList = new List<string>();
+        List<string> CardStatusList = new List<string>();
+        public string CardStatus;
         private void Form_Main_Load(object sender, EventArgs e)
         {
             Form_ProjectLogin form_ProjectLogin = new Form_ProjectLogin();
@@ -24,6 +30,14 @@ namespace XP_based_Scrum_Task_Board_Application
             {
                 this.Close();
             }
+            //ICommands icommands = (ICommands)commands;
+            //CardNameList = icommands.FillCardNametoFormMain(form_ProjectLogin.CardID);
+            //CardTextList = icommands.FillCardTexttoFormMain(form_ProjectLogin.CardID);
+            //CardStatusList = icommands.FillCardStatustoFormMain(form_ProjectLogin.CardID);
+            //for (int i = 0; i < CardNameList.Count; i++)
+            //{
+            //    Card_Add(CardStatusList[i],CardNameList[i],CardTextList[i]);
+            //}
         }
         private void btn_Close_Click(object sender, EventArgs e)
         {
@@ -39,23 +53,29 @@ namespace XP_based_Scrum_Task_Board_Application
         }
         private void btn_TodoCardAdd_Click(object sender, EventArgs e)
         {
-            Card_Add(Panel_Todo);
+            CardStatus = Panel_Todo.Name;
+            form_TechnicalCard.ShowDialog();
+            
         }
         private void btn_InProgressCardAdd_Click(object sender, EventArgs e)
         {
-            Card_Add(Panel_InProgress);
+            CardStatus = Panel_InProgress.Name;
+            form_TechnicalCard.ShowDialog();
         }
         private void btn_RevisonCardAdd_Click(object sender, EventArgs e)
         {
-            Card_Add(Panel_Revison);
+            CardStatus = Panel_Revison.Name;
+            form_TechnicalCard.ShowDialog();
         }
         private void btn_CheckCardAdd_Click(object sender, EventArgs e)
         {
-            Card_Add(Panel_Check);
+            CardStatus = Panel_Check.Name;
+            form_TechnicalCard.ShowDialog();
         }
         private void btn_DoneCardAdd_Click(object sender, EventArgs e)
         {
-            Card_Add(Panel_Done);
+            CardStatus = Panel_Done.Name;
+            form_TechnicalCard.ShowDialog();
         }
         private void panel_DragEnter(object sender, DragEventArgs e)
         {
@@ -97,7 +117,7 @@ namespace XP_based_Scrum_Task_Board_Application
                 button.DoDragDrop(button, DragDropEffects.Move);
             }
         }
-        private void Card_Add(Panel PanelToAttach)
+        private void Card_Add(string PanelToAttach,int Name, string Text)
         {
             Button crt = new Button();
             crt.MouseMove += new MouseEventHandler(Card_MouseMove);
@@ -105,11 +125,30 @@ namespace XP_based_Scrum_Task_Board_Application
             crt.TextAlign = ContentAlignment.TopLeft;
             crt.Padding = new Padding(10);
             crt.BackColor = Color.Red;
-            crt.Name = "test";
-            crt.Text = "selam balım";
+            crt.Name = Name.ToString();
+            crt.Text = Text;
             crt.Size = new Size(270, 100);
             crt.Dock = DockStyle.Top;
-            PanelToAttach.Controls.Add(crt);
+            if (PanelToAttach == Panel_Todo.Name)
+            {
+                Panel_Todo.Controls.Add(crt);
+            }
+            if (PanelToAttach == Panel_InProgress.Name)
+            {
+                Panel_InProgress.Controls.Add(crt);
+            }
+            if (PanelToAttach == Panel_Revison.Name)
+            {
+                Panel_Revison.Controls.Add(crt);
+            }
+            if (PanelToAttach == Panel_Check.Name)
+            {
+                Panel_Check.Controls.Add(crt);
+            }
+            if (PanelToAttach == Panel_Done.Name)
+            {
+                Panel_Done.Controls.Add(crt);
+            }
         }
     }
 }

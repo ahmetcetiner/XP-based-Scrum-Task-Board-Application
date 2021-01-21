@@ -47,6 +47,7 @@
             // 
             // Panel_Project
             // 
+            this.Panel_Project.AutoScroll = true;
             this.Panel_Project.Location = new System.Drawing.Point(0, 90);
             this.Panel_Project.Margin = new System.Windows.Forms.Padding(0);
             this.Panel_Project.Name = "Panel_Project";
@@ -67,7 +68,6 @@
             // btn_Close
             // 
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_Close.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_shutdown_3;
             this.btn_Close.ImageLocation = "";
             this.btn_Close.Location = new System.Drawing.Point(762, 3);
             this.btn_Close.Name = "btn_Close";
@@ -96,7 +96,6 @@
             // btn_EmployeesCardAdd
             // 
             this.btn_EmployeesCardAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_EmployeesCardAdd.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_plus_math_1;
             this.btn_EmployeesCardAdd.ImageLocation = "";
             this.btn_EmployeesCardAdd.Location = new System.Drawing.Point(777, 4);
             this.btn_EmployeesCardAdd.Name = "btn_EmployeesCardAdd";
@@ -109,7 +108,6 @@
             // btn_ProjectCardAdd
             // 
             this.btn_ProjectCardAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_ProjectCardAdd.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_plus_math_1;
             this.btn_ProjectCardAdd.ImageLocation = "";
             this.btn_ProjectCardAdd.Location = new System.Drawing.Point(330, 3);
             this.btn_ProjectCardAdd.Name = "btn_ProjectCardAdd";
@@ -151,6 +149,7 @@
             // 
             // Panel_Employees
             // 
+            this.Panel_Employees.AutoScroll = true;
             this.Panel_Employees.Location = new System.Drawing.Point(450, 90);
             this.Panel_Employees.Margin = new System.Windows.Forms.Padding(0);
             this.Panel_Employees.Name = "Panel_Employees";

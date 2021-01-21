@@ -17,7 +17,9 @@ namespace XP_based_Scrum_Task_Board_Application
         {
             InitializeComponent();
         }
-        SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-1N5RR86\MSSQLSERVER01;Initial Catalog=Scrum_Task_Board;Integrated Security=True");
+        Commands commands = new Commands();
+        Form_ProjectLogin form_ProjectLogin = new Form_ProjectLogin();
+        Form_Main form_Main = new Form_Main();
         private void Form_TechnicalCard_Load(object sender, EventArgs e)
         {
             
@@ -25,6 +27,12 @@ namespace XP_based_Scrum_Task_Board_Application
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            ICommands icommands = (ICommands)commands;
+            icommands.CardAdd(form_ProjectLogin.CardID, form_Main.CardStatus.ToString(), dtp_Date.ToString(), txt_ActualTime.Text, rtb_Description.Text, rtb_Notes.Text);
         }
     }
 }

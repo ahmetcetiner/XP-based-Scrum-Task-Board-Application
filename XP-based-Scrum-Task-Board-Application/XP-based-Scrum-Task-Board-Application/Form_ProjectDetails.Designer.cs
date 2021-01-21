@@ -35,9 +35,9 @@
             this.lbl_Employees = new System.Windows.Forms.Label();
             this.lbl_SelectedEmployees = new System.Windows.Forms.Label();
             this.btn_Ok = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_EmployeesAdd = new System.Windows.Forms.PictureBox();
             this.btn_cancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_EmployeesAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_ProjectName
@@ -64,6 +64,7 @@
             this.lbox_Employees.Name = "lbox_Employees";
             this.lbox_Employees.Size = new System.Drawing.Size(150, 225);
             this.lbox_Employees.TabIndex = 2;
+            this.lbox_Employees.DoubleClick += new System.EventHandler(this.btn_EmployeesAdd_Click);
             // 
             // lbox_SelectedEmployees
             // 
@@ -72,6 +73,7 @@
             this.lbox_SelectedEmployees.Name = "lbox_SelectedEmployees";
             this.lbox_SelectedEmployees.Size = new System.Drawing.Size(150, 225);
             this.lbox_SelectedEmployees.TabIndex = 3;
+            this.lbox_SelectedEmployees.DoubleClick += new System.EventHandler(this.lbox_SelectedEmployees_DoubleClick);
             // 
             // lbl_Employees
             // 
@@ -103,14 +105,15 @@
             this.btn_Ok.UseVisualStyleBackColor = true;
             this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
             // 
-            // pictureBox1
+            // btn_EmployeesAdd
             // 
-            this.pictureBox1.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_right_1;
-            this.pictureBox1.Location = new System.Drawing.Point(184, 191);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.btn_EmployeesAdd.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_right_1;
+            this.btn_EmployeesAdd.Location = new System.Drawing.Point(184, 191);
+            this.btn_EmployeesAdd.Name = "btn_EmployeesAdd";
+            this.btn_EmployeesAdd.Size = new System.Drawing.Size(32, 32);
+            this.btn_EmployeesAdd.TabIndex = 6;
+            this.btn_EmployeesAdd.TabStop = false;
+            this.btn_EmployeesAdd.Click += new System.EventHandler(this.btn_EmployeesAdd_Click);
             // 
             // btn_cancel
             // 
@@ -129,7 +132,7 @@
             this.ClientSize = new System.Drawing.Size(400, 400);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_Ok);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_EmployeesAdd);
             this.Controls.Add(this.lbl_SelectedEmployees);
             this.Controls.Add(this.lbl_Employees);
             this.Controls.Add(this.lbox_SelectedEmployees);
@@ -140,7 +143,8 @@
             this.Name = "Form_ProjectDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_ProjectDetails";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.Form_ProjectDetails_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_EmployeesAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,7 +158,7 @@
         private System.Windows.Forms.ListBox lbox_SelectedEmployees;
         private System.Windows.Forms.Label lbl_Employees;
         private System.Windows.Forms.Label lbl_SelectedEmployees;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btn_EmployeesAdd;
         private System.Windows.Forms.Button btn_Ok;
         private System.Windows.Forms.Button btn_cancel;
     }

@@ -18,10 +18,13 @@ namespace XP_based_Scrum_Task_Board_Application
         }
         public string Name;
         public bool Transition = false;
+        Commands commands = new Commands();
         private void btn_Ok_Click(object sender, EventArgs e)
         {
-            Transition = true;
             Name = txt_EmployeesName.Text + " " + txt_EmployeesLastName.Text;
+            ICommands icommands = (ICommands)commands;
+            icommands.EmployeesAdd(Name);
+            Transition = true;
             this.Close();
         }
     }
