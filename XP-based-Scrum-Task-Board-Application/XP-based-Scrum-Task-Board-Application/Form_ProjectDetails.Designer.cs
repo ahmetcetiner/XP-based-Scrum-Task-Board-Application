@@ -37,14 +37,16 @@
             this.btn_Ok = new System.Windows.Forms.Button();
             this.btn_EmployeesAdd = new System.Windows.Forms.PictureBox();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btn_EmployeesAdd)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_ProjectName
             // 
             this.lbl_ProjectName.AutoSize = true;
             this.lbl_ProjectName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_ProjectName.Location = new System.Drawing.Point(19, 32);
+            this.lbl_ProjectName.Location = new System.Drawing.Point(12, 27);
             this.lbl_ProjectName.Name = "lbl_ProjectName";
             this.lbl_ProjectName.Size = new System.Drawing.Size(97, 17);
             this.lbl_ProjectName.TabIndex = 0;
@@ -52,7 +54,7 @@
             // 
             // txt_ProjectName
             // 
-            this.txt_ProjectName.Location = new System.Drawing.Point(122, 32);
+            this.txt_ProjectName.Location = new System.Drawing.Point(115, 27);
             this.txt_ProjectName.Name = "txt_ProjectName";
             this.txt_ProjectName.Size = new System.Drawing.Size(127, 20);
             this.txt_ProjectName.TabIndex = 1;
@@ -60,7 +62,7 @@
             // lbox_Employees
             // 
             this.lbox_Employees.FormattingEnabled = true;
-            this.lbox_Employees.Location = new System.Drawing.Point(12, 113);
+            this.lbox_Employees.Location = new System.Drawing.Point(5, 108);
             this.lbox_Employees.Name = "lbox_Employees";
             this.lbox_Employees.Size = new System.Drawing.Size(150, 225);
             this.lbox_Employees.TabIndex = 2;
@@ -69,7 +71,7 @@
             // lbox_SelectedEmployees
             // 
             this.lbox_SelectedEmployees.FormattingEnabled = true;
-            this.lbox_SelectedEmployees.Location = new System.Drawing.Point(238, 113);
+            this.lbox_SelectedEmployees.Location = new System.Drawing.Point(216, 108);
             this.lbox_SelectedEmployees.Name = "lbox_SelectedEmployees";
             this.lbox_SelectedEmployees.Size = new System.Drawing.Size(150, 225);
             this.lbox_SelectedEmployees.TabIndex = 3;
@@ -79,7 +81,7 @@
             // 
             this.lbl_Employees.AutoSize = true;
             this.lbl_Employees.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_Employees.Location = new System.Drawing.Point(9, 93);
+            this.lbl_Employees.Location = new System.Drawing.Point(2, 88);
             this.lbl_Employees.Name = "lbl_Employees";
             this.lbl_Employees.Size = new System.Drawing.Size(80, 17);
             this.lbl_Employees.TabIndex = 4;
@@ -89,7 +91,7 @@
             // 
             this.lbl_SelectedEmployees.AutoSize = true;
             this.lbl_SelectedEmployees.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_SelectedEmployees.Location = new System.Drawing.Point(235, 93);
+            this.lbl_SelectedEmployees.Location = new System.Drawing.Point(213, 88);
             this.lbl_SelectedEmployees.Name = "lbl_SelectedEmployees";
             this.lbl_SelectedEmployees.Size = new System.Drawing.Size(142, 17);
             this.lbl_SelectedEmployees.TabIndex = 5;
@@ -97,7 +99,7 @@
             // 
             // btn_Ok
             // 
-            this.btn_Ok.Location = new System.Drawing.Point(216, 360);
+            this.btn_Ok.Location = new System.Drawing.Point(194, 348);
             this.btn_Ok.Name = "btn_Ok";
             this.btn_Ok.Size = new System.Drawing.Size(83, 28);
             this.btn_Ok.TabIndex = 7;
@@ -108,7 +110,7 @@
             // btn_EmployeesAdd
             // 
             this.btn_EmployeesAdd.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_right_1;
-            this.btn_EmployeesAdd.Location = new System.Drawing.Point(184, 191);
+            this.btn_EmployeesAdd.Location = new System.Drawing.Point(177, 186);
             this.btn_EmployeesAdd.Name = "btn_EmployeesAdd";
             this.btn_EmployeesAdd.Size = new System.Drawing.Size(32, 32);
             this.btn_EmployeesAdd.TabIndex = 6;
@@ -117,7 +119,7 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(305, 360);
+            this.btn_cancel.Location = new System.Drawing.Point(283, 348);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(83, 28);
             this.btn_cancel.TabIndex = 8;
@@ -125,28 +127,39 @@
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(230)))), ((int)(((byte)(3)))));
+            this.panel1.Controls.Add(this.lbl_ProjectName);
+            this.panel1.Controls.Add(this.btn_cancel);
+            this.panel1.Controls.Add(this.txt_ProjectName);
+            this.panel1.Controls.Add(this.btn_Ok);
+            this.panel1.Controls.Add(this.lbox_Employees);
+            this.panel1.Controls.Add(this.btn_EmployeesAdd);
+            this.panel1.Controls.Add(this.lbox_SelectedEmployees);
+            this.panel1.Controls.Add(this.lbl_SelectedEmployees);
+            this.panel1.Controls.Add(this.lbl_Employees);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(376, 376);
+            this.panel1.TabIndex = 9;
+            // 
             // Form_ProjectDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(400, 400);
-            this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_Ok);
-            this.Controls.Add(this.btn_EmployeesAdd);
-            this.Controls.Add(this.lbl_SelectedEmployees);
-            this.Controls.Add(this.lbl_Employees);
-            this.Controls.Add(this.lbox_SelectedEmployees);
-            this.Controls.Add(this.lbox_Employees);
-            this.Controls.Add(this.txt_ProjectName);
-            this.Controls.Add(this.lbl_ProjectName);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_ProjectDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_ProjectDetails";
             this.Load += new System.EventHandler(this.Form_ProjectDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_EmployeesAdd)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -161,5 +174,6 @@
         private System.Windows.Forms.PictureBox btn_EmployeesAdd;
         private System.Windows.Forms.Button btn_Ok;
         private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Panel panel1;
     }
 }

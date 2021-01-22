@@ -24,5 +24,9 @@ namespace XP_based_Scrum_Task_Board_Application
         List<string> FillCardTexttoFormMain(int ProjectsId);
         List<string> FillCardStatustoFormMain(int ProjectsId);
         void CardAdd(int ProjectId, string Status, string CreationDate, string RelizationTime, string CardDescription, string Nots);
+        void EmployeesUpdate(string Name, int ID);
+        void EmployeesDelete(int ID);
+        void CardDelete(int ID);
+        void CardStatusUpdate(int ID, string status);
     }
 }

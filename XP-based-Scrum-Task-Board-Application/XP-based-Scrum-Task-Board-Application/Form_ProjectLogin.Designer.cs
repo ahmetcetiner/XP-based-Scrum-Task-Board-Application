@@ -56,7 +56,7 @@
             // 
             // Panel_Top
             // 
-            this.Panel_Top.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Panel_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Panel_Top.Controls.Add(this.btn_Close);
             this.Panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Top.Location = new System.Drawing.Point(0, 0);
@@ -68,6 +68,7 @@
             // btn_Close
             // 
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Close.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_shutdown_2;
             this.btn_Close.ImageLocation = "";
             this.btn_Close.Location = new System.Drawing.Point(762, 3);
             this.btn_Close.Name = "btn_Close";
@@ -81,7 +82,7 @@
             // 
             // Panel_Baslik
             // 
-            this.Panel_Baslik.BackColor = System.Drawing.Color.Salmon;
+            this.Panel_Baslik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(193)))), ((int)(((byte)(172)))));
             this.Panel_Baslik.Controls.Add(this.btn_EmployeesCardAdd);
             this.Panel_Baslik.Controls.Add(this.btn_ProjectCardAdd);
             this.Panel_Baslik.Controls.Add(this.lbl_EmployeesBaslik);
@@ -96,6 +97,7 @@
             // btn_EmployeesCardAdd
             // 
             this.btn_EmployeesCardAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_EmployeesCardAdd.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_plus_math_1;
             this.btn_EmployeesCardAdd.ImageLocation = "";
             this.btn_EmployeesCardAdd.Location = new System.Drawing.Point(777, 4);
             this.btn_EmployeesCardAdd.Name = "btn_EmployeesCardAdd";
@@ -108,6 +110,7 @@
             // btn_ProjectCardAdd
             // 
             this.btn_ProjectCardAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ProjectCardAdd.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_plus_math_1;
             this.btn_ProjectCardAdd.ImageLocation = "";
             this.btn_ProjectCardAdd.Location = new System.Drawing.Point(330, 3);
             this.btn_ProjectCardAdd.Name = "btn_ProjectCardAdd";
@@ -139,7 +142,7 @@
             // 
             // Panel_Bottom
             // 
-            this.Panel_Bottom.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Panel_Bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Panel_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Panel_Bottom.Location = new System.Drawing.Point(0, 690);
             this.Panel_Bottom.Margin = new System.Windows.Forms.Padding(0);
@@ -160,6 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(230)))), ((int)(((byte)(3)))));
             this.ClientSize = new System.Drawing.Size(800, 700);
             this.Controls.Add(this.Panel_Employees);
             this.Controls.Add(this.Panel_Bottom);

@@ -25,20 +25,23 @@ namespace XP_based_Scrum_Task_Board_Application
 
         private void btn_Ok_Click(object sender, EventArgs e)
         {
-            ICommands icommands = (ICommands)commands;
-            ProjectID = icommands.AddProject(txt_ProjectName.Text, ProjectID);
-            foreach (var item in lbox_SelectedEmployees.Items)
+            if (txt_ProjectName.Text != "" && lbox_SelectedEmployees.Items.Count != 0)
             {
-                EmployeesID = icommands.EmployeesID(item.ToString(), EmployeesID);
-                EmployeesId.Add(EmployeesID);
+                ICommands icommands = (ICommands)commands;
+                ProjectID = icommands.AddProject(txt_ProjectName.Text, ProjectID);
+                foreach (var item in lbox_SelectedEmployees.Items)
+                {
+                    EmployeesID = icommands.EmployeesID(item.ToString(), EmployeesID);
+                    EmployeesId.Add(EmployeesID);
+                }
+                foreach (var item in EmployeesId)
+                {
+                    icommands.AddProjectEmployees(item, ProjectID);
+                }
+                Transition = true;
+                ButtonName = txt_ProjectName.Text;
+                this.Close();
             }
-            foreach (var item in EmployeesId)
-            {
-                icommands.AddProjectEmployees(item, ProjectID);
-            }
-            Transition = true;
-            ButtonName = txt_ProjectName.Text;
-            this.Close();
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

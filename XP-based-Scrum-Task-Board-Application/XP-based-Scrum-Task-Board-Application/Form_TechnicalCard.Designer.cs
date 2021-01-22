@@ -73,7 +73,7 @@ namespace XP_based_Scrum_Task_Board_Application
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.btn_Close);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -85,7 +85,7 @@ namespace XP_based_Scrum_Task_Board_Application
             // btn_Close
             // 
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_Close.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_shutdown_3;
+            this.btn_Close.Image = global::XP_based_Scrum_Task_Board_Application.Properties.Resources.icons8_shutdown_2;
             this.btn_Close.ImageLocation = "";
             this.btn_Close.Location = new System.Drawing.Point(753, 3);
             this.btn_Close.Name = "btn_Close";
@@ -94,6 +94,8 @@ namespace XP_based_Scrum_Task_Board_Application
             this.btn_Close.TabIndex = 2;
             this.btn_Close.TabStop = false;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            this.btn_Close.MouseEnter += new System.EventHandler(this.btn_Close_MouseEnter);
+            this.btn_Close.MouseLeave += new System.EventHandler(this.btn_Close_MouseLeave);
             // 
             // label1
             // 
@@ -107,7 +109,7 @@ namespace XP_based_Scrum_Task_Board_Application
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 790);
             this.panel2.Name = "panel2";
@@ -156,6 +158,7 @@ namespace XP_based_Scrum_Task_Board_Application
             // 
             // txt_CardNo
             // 
+            this.txt_CardNo.Enabled = false;
             this.txt_CardNo.Location = new System.Drawing.Point(93, 31);
             this.txt_CardNo.Name = "txt_CardNo";
             this.txt_CardNo.Size = new System.Drawing.Size(120, 22);
@@ -188,6 +191,7 @@ namespace XP_based_Scrum_Task_Board_Application
             // 
             // txt_EstimatedTime
             // 
+            this.txt_EstimatedTime.Enabled = false;
             this.txt_EstimatedTime.Location = new System.Drawing.Point(105, 3);
             this.txt_EstimatedTime.Name = "txt_EstimatedTime";
             this.txt_EstimatedTime.Size = new System.Drawing.Size(225, 22);
@@ -242,6 +246,7 @@ namespace XP_based_Scrum_Task_Board_Application
             // 
             // txt_ProjectName
             // 
+            this.txt_ProjectName.Enabled = false;
             this.txt_ProjectName.Location = new System.Drawing.Point(123, 3);
             this.txt_ProjectName.Name = "txt_ProjectName";
             this.txt_ProjectName.Size = new System.Drawing.Size(256, 22);
@@ -271,6 +276,7 @@ namespace XP_based_Scrum_Task_Board_Application
             // 
             // txt_TechnicalEmp
             // 
+            this.txt_TechnicalEmp.Enabled = false;
             this.txt_TechnicalEmp.Location = new System.Drawing.Point(123, 31);
             this.txt_TechnicalEmp.Name = "txt_TechnicalEmp";
             this.txt_TechnicalEmp.Size = new System.Drawing.Size(256, 22);
@@ -395,6 +401,7 @@ namespace XP_based_Scrum_Task_Board_Application
             this.btn_Delete.TabIndex = 9;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Update
             // 
@@ -404,11 +411,13 @@ namespace XP_based_Scrum_Task_Board_Application
             this.btn_Update.TabIndex = 10;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // Form_TechnicalCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(230)))), ((int)(((byte)(3)))));
             this.ClientSize = new System.Drawing.Size(800, 800);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Delete);
@@ -424,6 +433,7 @@ namespace XP_based_Scrum_Task_Board_Application
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_TechnicalCard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_TechnicalCard";
             this.Load += new System.EventHandler(this.Form_TechnicalCard_Load);
             this.panel1.ResumeLayout(false);

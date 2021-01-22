@@ -165,7 +165,7 @@ namespace XP_based_Scrum_Task_Board_Application
         {
             List<string> CardStatus= new List<string>();
             connection.Open();
-            SqlCommand commandStatus = new SqlCommand("Select CardDescription From Cards where ProjectId=" + ProjectsId + "", connection);
+            SqlCommand commandStatus = new SqlCommand("Select Status From Cards where ProjectId=" + ProjectsId + "", connection);
             SqlDataReader data_readerStatus = commandStatus.ExecuteReader();
             while (data_readerStatus.Read())
             {
@@ -178,8 +178,40 @@ namespace XP_based_Scrum_Task_Board_Application
         public void CardAdd(int ProjectId,string Status, string CreationDate, string RelizationTime, string CardDescription, string Nots)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("INSERT into Cards (ProjectId,Status,CreationDate,RelizationTime,CardDescription,Nots) OUTPUT inserted.ProjectID VALUES(" + ProjectId + "," + Status + "," + CreationDate + "," + RelizationTime + "," + CardDescription + "," + Nots + ")", connection);
-            command.ExecuteReader();
+            SqlCommand command = new SqlCommand("INSERT into Cards (ProjectId,Status,CreationDate,RealizationTime,CardDescription,Nots) OUTPUT inserted.ProjectID VALUES(" + ProjectId + ",'" + Status + "','" + CreationDate + "','" + RelizationTime + "','" + CardDescription + "','" + Nots + "')", connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void EmployeesUpdate(string Name, int ID)
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand("Update TechnicalEmployees set EmployeesName ='" + Name + "' where EmployeesId=" + ID + "", connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void EmployeesDelete(int ID)
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand("delete ProjectTechnicalEmployees where EmployeesId = " + ID + "delete TechnicalEmployees where EmployeesId = " + ID + "", connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void CardDelete(int ID)
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand("delete Cards where CardId = " + ID + "delete CardTechnicalEmployees where CardId = " + ID + "", connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void CardStatusUpdate(int ID, string status)
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand("Update Cards set Status ='" + status + "' where CardId=" + ID + "", connection);
+            command.ExecuteNonQuery();
             connection.Close();
         }
     }
